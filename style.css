@@ -11,6 +11,7 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  background-color: #9294a000;
 }
 /*
 =============================
@@ -84,7 +85,7 @@ input::placeholder {
 }
 input:focus {
   outline: none;
-  border: 2px solid #9294a0;
+  border: 1px solid #9294a0;
   color: #242742;
 }
 button {
@@ -159,6 +160,10 @@ input.error-input::placeholder,
 .error-input {
   color: #ff6257;
 }
+input.error-input:focus {
+  outline: none;
+  border: 1px solid #ff6257;
+}
 .error-input {
   border: 1px solid #ff6257b6;
   background-color: #ff62572c;
@@ -185,7 +190,7 @@ input.error-input::placeholder,
     border-radius: 40px;
   }
   #hero-img {
-    flex-basis: 50%;
+    flex-basis: 60%;
     background-image: url(./assets/images/illustration-sign-up-desktop.svg);
     width: 100%;
     height: 100%;
