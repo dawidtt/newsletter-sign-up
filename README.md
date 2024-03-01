@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution](https://your-solution-url.com)
+- Solution URL: [solution](https://dawidtt.github.io/newsletter-sign-up/)
 
 ## My process
 
