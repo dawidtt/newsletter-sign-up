@@ -20,30 +20,44 @@
     <title>Newsletter sign-up form with success message</title>
   </head>
   <body>
-    <div id="hero-img"></div>
-    <main>
-      <section id="content-container">
-        <section id="text">
-          <h1>Stay updated!</h1>
-          <p>Join 60,000+ product managers receiving monthly updates on:</p>
-          <ul>
-            <li>Product discovery and building what matters</li>
-            <li>Measuring to ensure updates are a success</li>
-            <li>And much more!</li>
-          </ul>
+    <div id="desktop-flex-container">
+      <div id="hero-img"></div>
+      <main>
+        <section id="content-container">
+          <section id="text">
+            <h1>Stay updated!</h1>
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+            <div class="list-container">
+              <img src="./assets/images/icon-list.svg" alt="" />
+              <p>Product discovery and building what matters</p>
+            </div>
+            <div class="list-container">
+              <img src="./assets/images/icon-list.svg" alt="" />
+              <p>Measuring to ensure updates are a success</p>
+            </div>
+            <div class="list-container"></div>
+            <div class="list-container">
+              <img src="./assets/images/icon-list.svg" alt="" />
+              <p>And much more!</p>
+            </div>
+          </section>
         </section>
-      </section>
 
-      <form action="./success.html">
-        <p>Email address</p>
-        <input
-          placeholder=" email@company.com"
-          type="text"
-          name=""
-          id="email"
-        />
-        <button>Subscribe to monthly newsletter</button>
-      </form>
-    </main>
+        <form action="./success.html">
+          <div id="form-text">
+            <p>Email address</p>
+            <p class="error-message"></p>
+          </div>
+
+          <input
+            placeholder=" email@company.com"
+            type="text"
+            name=""
+            id="email"
+          />
+          <button>Subscribe to monthly newsletter</button>
+        </form>
+      </main>
+    </div>
   </body>
 </html>

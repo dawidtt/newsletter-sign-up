@@ -10,6 +10,7 @@
 }
 body {
   font-family: "Roboto", sans-serif;
+  font-size: 16px;
 }
 /*
 =============================
@@ -18,6 +19,8 @@ body {
 */
 #hero-img {
   background-image: url(./assets/images/illustration-sign-up-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 30vh;
   border-bottom-left-radius: 15px;
@@ -30,10 +33,166 @@ body {
 =========================================
 */
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 70vh;
   padding: 0 5%;
 }
-li {
-  list-style-image: url(./assets/images/icon-list.svg);
-  list-style-position: inside;
+/*
+=============================
+           TEXT
+=============================
+*/
+#text h1 {
+  color: #242742;
+  font-size: 2.5rem;
+  margin: 0 0 30px 0;
+}
+#text p {
+  color: #36384e;
+  margin: 0 0 30px 0;
+}
+
+.list-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #36384e;
+}
+.list-container img {
+  margin-right: 15px;
+}
+/*
+=============================
+           FORM
+=============================
+*/
+form p {
+  color: #242742;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+input {
+  margin-bottom: 20px;
+  border: 1px solid #9294a059;
+}
+input::placeholder {
+  color: #9294a0;
+}
+input:focus {
+  outline: none;
+  border: 2px solid #9294a0;
+  color: #242742;
+}
+button {
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 500;
+  border: none;
+  position: relative;
+  z-index: 1;
+}
+button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #242742;
+  border-radius: 12px;
+  opacity: 1;
+  transition: opacity 0.2s linear;
+  z-index: -1;
+}
+button:hover::after {
+  opacity: 0;
+}
+button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(235, 144, 176);
+  background: linear-gradient(
+    90deg,
+    rgba(235, 144, 176, 1) 0%,
+    rgba(255, 98, 87, 1) 48%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  -webkit-box-shadow: 0px 14px 39px -12px rgba(255, 98, 87, 1);
+  -moz-box-shadow: 0px 14px 39px -12px rgba(255, 98, 87, 1);
+  box-shadow: 0px 14px 39px -12px rgba(255, 98, 87, 1);
+  border-radius: 10px;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+  z-index: -1;
+}
+button:hover::after {
+  opacity: 1;
+}
+button:hover {
+  cursor: pointer;
+}
+input,
+button {
+  width: 100%;
+  padding: 20px 30px;
+  border-radius: 8px;
+}
+/*
+=============================
+        FORM ERROR
+=============================
+*/
+#form-text {
+  display: flex;
+  justify-content: space-between;
+}
+.error-message,
+input.error-input::placeholder,
+.error-input {
+  color: #ff6257;
+}
+.error-input {
+  border: 1px solid #ff6257b6;
+  background-color: #ff62572c;
+}
+
+@media (min-width: 576px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #242742;
+    height: 100vh;
+  }
+  #desktop-flex-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    width: auto;
+    width: 900px;
+    height: 550px;
+    padding: 20px;
+    border-radius: 40px;
+  }
+  #hero-img {
+    flex-basis: 50%;
+    background-image: url(./assets/images/illustration-sign-up-desktop.svg);
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  button {
+    font-weight: 600;
+  }
 }
