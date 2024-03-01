@@ -24,9 +24,11 @@ main {
 #thanks-message h1 {
   color: #242742;
   margin-bottom: 25px;
+  font-size: 2.4rem;
 }
 #thanks-message p {
   color: #36384e;
+  font-size: 1.1rem;
 }
 #thanks-message p span {
   color: #242742;
@@ -110,16 +112,17 @@ button:hover {
     max-height: 600px;
     border-radius: 20px;
   }
-}
-#thanks-message {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  margin-bottom: 30px;
-}
-#thanks-message h1 {
-  font-size: 2.6rem;
-}
-button {
-  grid-column: 1/2;
-  grid-row: 2/3;
+
+  #thanks-message {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-bottom: 30px;
+  }
+  #thanks-message h1 {
+    font-size: 2.6rem;
+  }
+  button {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
 }
